@@ -19,14 +19,12 @@ function text(a) {
 
 }
 
-function open() {
-  let item = document.getElementById('public');
-  item.style.display = "block";
-  console.log("work");
+function public() {
+  var form = document.getElementById('public');
+  form.style.display = "block";
 }
 
-function close() {
-  let item = document.getElementById('public');
-  item.style.display = "none";
-  console.log("work");
+function getClose() {
+  var form = document.getElementById('public');
+  form.style.display = "none";
 }

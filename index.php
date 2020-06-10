@@ -11,10 +11,22 @@
       <header>
         <h1>Logo</h1>
         <ul>
-          <li><a href="#">Войти</a></li>
-          <li><a href="#" onclick="open()">Опубликовать</a></li>
+          <li onclick="public()">Опубликовать</li>
         </ul>
       </header>
+      <div class="public" id="public">
+
+        <form class="" action="#" method="post">
+          <label for="heading">Введите название статьи:</label><br>
+          <input type="text" name="heading" value=""><br>
+          <label for="about">Введите текст статьи:</label><br>
+          <textarea name="about"></textarea><br>
+          <label for="image">Загрузите картинку</label>
+          <input type="file" name="image" value=""><br>
+          <button type="submit" name="button">Загрузить</button>
+          <button type="button" name="button" onclick="getClose()">Закрыть</button>
+        </form>
+      </div>
       <main>
         <?php
           $timeNow = time();
@@ -49,7 +61,6 @@
                       <p>{$date}</p>
                       <h3 onclick='text(this)' id='{$id}'>Читать подробнее</h3>
                       <p class='full {$id}'>{$result['about']}</p>
-                      <span>Удалить</span>
                     </div>
                   </div>";
           };
@@ -67,19 +78,7 @@
       </footer>
 
     </div>
-    <div class="public" id="public">
 
-      <form class="" action="#" method="post">
-        <label for="heading">Введите название статьи:</label><br>
-        <input type="text" name="heading" value=""><br>
-        <label for="about">Введите текст статьи:</label><br>
-        <textarea name="about"></textarea><br>
-        <label for="image">Загрузите картинку</label>
-        <input type="file" name="image" value=""><br>
-        <button type="submit" name="button">Загрузить</button>
-        <button type="button" name="button" onclick="close()">Закрыть</button>
-      </form>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
